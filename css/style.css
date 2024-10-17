@@ -589,7 +589,7 @@ h3 {
     padding: 115px 0 115px 0;
     margin: 0;
 }
-.image-locate-branches{
+.branches > div > div:last-child > div > div:first-child > svg {
     width: 52px!important;
     height: 52px!important;
 }
@@ -701,7 +701,7 @@ h3 {
         padding-top: 44px;
     }
 
-    .image-locate-branches{
+    .branches > div > div:last-child > div > div:first-child > svg {
         width: 46px!important;
         height: 46px!important;
     }
