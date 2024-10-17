@@ -5,10 +5,6 @@
     line-height: 1.2;
 }
 
-input::placeholder {
-    padding-left: 12px; /* Устанавливаем отступ справа на 20 пикселей (или любое другое значение) */
-}
-
 .body {
     font-family: 'Core Sans C', arial, serif;
 }
@@ -265,6 +261,7 @@ h3 {
 .text-seo {
     padding-bottom: 16px;
     line-height: 24px;
+    color:rgba(10, 47, 65, 1);
 }
 
 .seo-container > div:first-child {
@@ -444,6 +441,7 @@ h3 {
 
 .block-types-of-services > div:not(.additional) > a {
     word-break: break-all;
+    color: rgba(10, 47, 65, 1);
 }
 
 .block-types-of-services > div {
@@ -630,6 +628,7 @@ h3 {
 .location-city {
     font-size: 20px;
     font-weight: bold;
+    color:rgba(14, 58, 79, 1);
 }
 
 .branches > div > div:first-child {
@@ -798,18 +797,22 @@ h3 {
     width: 100%;
     max-width: calc(100% - 20px);
 }
-
+.input-name-phone{
+    overflow: hidden;
+}
 .input-field-box {
     width: 100%;
     border: none;
     height: 52px;
     font-size: 16px;
+    padding-left: 16px;
 }
 
 
 .additional-info {
     text-decoration: underline;
     text-underline-offset: 5px;
+    color:rgba(10, 47, 65, 1);
 }
 
 .agreement-button {
@@ -820,6 +823,10 @@ h3 {
     border: none;
     transition-duration: 0.5s;
     font-size: 16px;
+}
+
+.agreement{
+    font-size: 14px;
 }
 
 .agreement-button:hover {
@@ -845,7 +852,11 @@ h3 {
     display: none!important;
 }
 
-
+.image-contact-form {
+    object-fit: contain!important;
+    max-width: 40%;
+    width: 100%;
+}
 
 .input-field > div:first-child {
     color: #FFFFFF;
@@ -853,6 +864,10 @@ h3 {
 
 .checkbox-field-policy {
     padding-right: 8px;
+}
+
+.image-contact-form > img{
+    display: block;
 }
 
 .checkbox-field-policy > input {
@@ -908,11 +923,9 @@ h3 {
         padding-bottom: 0!important;
         justify-content: center;
     }
-    .image-contact-form {
-        object-fit: contain!important;
-    }
     .image-contact-form{
         display: none!important;
+        padding: 0;
     }
 
     .contract-form > div:first-child > div > div:first-child {
@@ -957,6 +970,10 @@ h3 {
         padding-bottom: 0 !important;
     }
 
+    .mobile-image-contact-form > img{
+        display: block;
+    }
+
     .box-inputa > div {
         position: relative;
         display: block;
@@ -977,6 +994,8 @@ h3 {
     .input-field-box {
         width: 100%;
         height: 42px;
+        border: none;
+        outline: none;
     }
 
     .agreement-button {
@@ -1040,7 +1059,7 @@ h3 {
 
 .contact-info-block {
     padding: 58px 0 0 0;
-    display: flex;
+    display: flex!important;
 }
 .contact-info{
     display: flex;
@@ -1058,6 +1077,14 @@ h3 {
     transition-duration: 0.5s;
 }
 
+.container-footer>.links-footer:last-child{
+    padding-top: 10px;
+}
+
+.container-footer {
+    justify-content: normal!important;
+}
+
 .button-footer-first-section:hover {
     background-color: #0E3A4F;
     cursor: pointer;
@@ -1071,7 +1098,7 @@ h3 {
 
 .button-footer-A2 {
     color: white;
-    padding: 13px 18px;
+    padding: 13px 20px;
     font-size: 16px;
     background-color: #FF7300;
     border: none;
@@ -1097,6 +1124,8 @@ h3 {
 
 .box-links {
     padding-top: 30px;
+    padding-left: 16px;
+    font-size: 16px;
 }
 
 .footer-icon-button, .links-footer, .end-text-footer, .end-text-footer {
@@ -1126,14 +1155,21 @@ h3 {
 @media (max-width: 910px) {
     .container-footer {
         padding: 0;
+        display: grid;
+        width: 100%;
+    }
+
+    .footer a {
+        font-size: 14px;
     }
 
     .link-footer {
-        padding-bottom: 8px;
+        padding-bottom: 11px;
     }
 
     .box-links {
         padding-top: 19px;
+        padding-left: 0;
         font-size: 16px;
     }
 
@@ -1159,7 +1195,6 @@ h3 {
 
     .footer-icon-button-mobile {
         width: 100%;
-        grid-area: A;
         position: relative;
         display: inline-flex;
         justify-content: space-between;
@@ -1183,20 +1218,30 @@ h3 {
     .links-footer {
         line-height: 2;
         font-size: 14px;
-        padding-left: 20px;
+        width: 100%;
+    }
+    div>.links-footer:last-child {
+        width: 10%;
+    }
+    .last-links-footer{
+        padding-top: 12px;
     }
 
+    .last-link-footer{
+        font-size: 16px!important;
+    }
+
+
     .contact-info-block {
-        padding: 25px 0 0 0;
+        padding: 23px 0 0 0;
         justify-content: center;
-        display: grid;
+        display: block;
     }
 
     .end-text-footer {
         padding-top: 28px;
         color: rgba(255, 255, 255, 0.6);
         font-size: 14px;
-        grid-area: E;
     }
 
     .end-text-footer-center {
@@ -1205,7 +1250,6 @@ h3 {
     }
 
     .end-text-footer {
-        grid-area: I;
         padding-top: 27px;
         font-size: 14px;
     }
